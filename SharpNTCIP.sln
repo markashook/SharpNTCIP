@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{31D44373-C1C7-48D8-9A0B-005A35DC8C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpNTCIP", "SharpNTCIP.csproj", "{2ED7257F-B768-406D-98E1-5DFF6C041287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpNTCIP.Test.Runner", "Test\Runner\SharpNTCIP.Test.Runner.csproj", "{1ADB7C50-8DEA-4C0B-AD2F-0B60217562B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpNTCIP.Test.Tests", "Test\Tests\SharpNTCIP.Test.Tests.csproj", "{307E5B67-2C36-40C2-B287-21EB9FAE397D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ED7257F-B768-406D-98E1-5DFF6C041287}.Debug|x86.ActiveCfg = Debug|x86
+		{2ED7257F-B768-406D-98E1-5DFF6C041287}.Debug|x86.Build.0 = Debug|x86
+		{2ED7257F-B768-406D-98E1-5DFF6C041287}.Release|x86.ActiveCfg = Release|x86
+		{2ED7257F-B768-406D-98E1-5DFF6C041287}.Release|x86.Build.0 = Release|x86
+		{1ADB7C50-8DEA-4C0B-AD2F-0B60217562B9}.Debug|x86.ActiveCfg = Debug|x86
+		{1ADB7C50-8DEA-4C0B-AD2F-0B60217562B9}.Debug|x86.Build.0 = Debug|x86
+		{1ADB7C50-8DEA-4C0B-AD2F-0B60217562B9}.Release|x86.ActiveCfg = Release|x86
+		{1ADB7C50-8DEA-4C0B-AD2F-0B60217562B9}.Release|x86.Build.0 = Release|x86
+		{307E5B67-2C36-40C2-B287-21EB9FAE397D}.Debug|x86.ActiveCfg = Debug|x86
+		{307E5B67-2C36-40C2-B287-21EB9FAE397D}.Debug|x86.Build.0 = Debug|x86
+		{307E5B67-2C36-40C2-B287-21EB9FAE397D}.Release|x86.ActiveCfg = Release|x86
+		{307E5B67-2C36-40C2-B287-21EB9FAE397D}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1ADB7C50-8DEA-4C0B-AD2F-0B60217562B9} = {31D44373-C1C7-48D8-9A0B-005A35DC8C48}
+		{307E5B67-2C36-40C2-B287-21EB9FAE397D} = {31D44373-C1C7-48D8-9A0B-005A35DC8C48}
+	EndGlobalSection
+EndGlobal
