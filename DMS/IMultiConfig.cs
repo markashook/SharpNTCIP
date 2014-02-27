@@ -103,9 +103,7 @@ namespace SharpNTCIP.DMS
         eightBit = 2
     }
 
-    [NtcipOid("1.3.6.1.4.1.1206.4.2.3.4"),
-    NtcipAccess(NtcipAccessAttribute.Access.none),
-    NtcipMandatory(true)]
+    [NtcipOid("1.3.6.1.4.1.1206.4.2.3.4")]
     public interface IMultiConfig
     {
         /// <summary>
@@ -512,7 +510,7 @@ namespace SharpNTCIP.DMS
         [NtcipOid("1.3.6.1.4.1.1206.4.2.3.4.24.0"),
         NtcipAccess(NtcipAccessAttribute.Access.read),
         NtcipMandatory(true)]
-        byte[] defaultBackgroundRGB
+        byte[] defaultBackgroundRGBActivate
         {
             get;
         }

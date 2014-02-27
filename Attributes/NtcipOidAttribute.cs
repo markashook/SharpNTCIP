@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-[AttributeUsage(AttributeTargets.Interface | AttributeTargets.Property)]
+[AttributeUsage(AttributeTargets.Interface | AttributeTargets.Property | AttributeTargets.Class)]
 class NtcipOidAttribute : System.Attribute
 {
     private string _oid;
