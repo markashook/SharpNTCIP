@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SharpNTCIP.Attributes;
 
 namespace SharpNTCIP.DMS
 {
@@ -48,7 +49,7 @@ namespace SharpNTCIP.DMS
     /// <seealso>NTCIP 1203:1997 -- National Transportation Communications 
     /// for ITS Protocol (NTCIP) Object Definitions for Dynamic Message 
     /// Signs (DMS)</seealso>
-
+    [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7")]
     public interface IIllumination
     {
         /// <summary>
@@ -59,6 +60,10 @@ namespace SharpNTCIP.DMS
         /// the current brightness level shall automatically be 
         /// loaded into the dmsIllumManLevel object
         /// </remarks>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.1.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read | 
+            NtcipAccessAttribute.Access.write),
+        NtcipMandatory(true)]
         IlluminationControl dmsIllumControl
         {
             get;
@@ -69,6 +74,9 @@ namespace SharpNTCIP.DMS
         /// Indicates the maximum value given by the 
         /// dmsIllumPhotocellLevelStatus-object
         /// </summary>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.2.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true)]
         UInt16 dmsIllumMaxPhotocellLevel
         {
             get;
@@ -80,6 +88,9 @@ namespace SharpNTCIP.DMS
         /// dmsIllumMaxPhotocellLevel- object (brightest), based 
         /// on the photocell detection
         /// </summary>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.3.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true)]
         UInt16 dmsIllumPhotocellLevelStatus
         {
             get;
@@ -90,6 +101,9 @@ namespace SharpNTCIP.DMS
         /// Brightness Levels supported by the device, excluding 
         /// the OFF level
         /// </summary>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.4.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true)]
         byte dmsIllumNumBrightLevels
         {
             get;
@@ -100,6 +114,9 @@ namespace SharpNTCIP.DMS
         /// ranging from 0 (OFF) to the maximum value given by 
         /// the dmsIllumNumBrightLevels- object (Brightest)
         /// </summary>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.5.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true)]
         byte dmsIllumBrightLevelStatus
         {
             get;
@@ -110,6 +127,10 @@ namespace SharpNTCIP.DMS
         /// as a value ranging from 0 to the value of the 
         /// dmsIllumNumBrightLevels-object when under manual control
         /// </summary>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.6.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read |
+            NtcipAccessAttribute.Access.write),
+        NtcipMandatory(true)]
         byte dmsIllumManLevel
         {
             get;
@@ -169,6 +190,10 @@ namespace SharpNTCIP.DMS
         /// | Photocell-Level-Down point n | Photocell-Level-Up point n |
         /// +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
         /// </example>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.7.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read |
+            NtcipAccessAttribute.Access.write),
+        NtcipMandatory(true)]
         byte[] dmsIllumBrightnessValues
         {
             get;
@@ -179,6 +204,9 @@ namespace SharpNTCIP.DMS
         /// Indicates the error encountered when the brightness table 
         /// was last set
         /// </summary>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.8.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true)]
         IlluminationBrightnessValuesError dmsIllumBrightnessValuesError
         {
             get;
@@ -188,6 +216,9 @@ namespace SharpNTCIP.DMS
         /// Indicates the current physical light output value ranging 
         /// from 0 (darkest) to 65535 (maximum output)
         /// </summary>
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.3.7.9.0"),
+        NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true)]
         UInt16 dmsIllumLightOutputStatus
         {
             get;

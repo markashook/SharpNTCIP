@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpNTCIP.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -22,7 +23,7 @@ namespace SharpNTCIP.DMS
         /// <summary>
         /// volatile and changeable
         /// </summary>
-        volatile_ = 4,
+        @volatile = 4,
         /// <summary>
         /// contains the information regarding the currently 
         /// displayed message. Only one entry in the table can 
@@ -39,7 +40,21 @@ namespace SharpNTCIP.DMS
         /// displayed message when the dmsMessageSourceMode is 
         /// timebasedScheduler
         /// </summary>
-        schedule = 6
+        schedule = 6,
+        /// <summary>
+        /// there shall be 255 (message numbers 1 through 255)
+        /// pre-defined, static rows with this message type. These rows are
+        /// defined so that message codes (e.g., objects with SYNTAX of
+        /// either MessageIDCode or MessageActivationCode) can blank the
+        /// sign at a stated run-time priority. The run-time priority of the blank
+        /// message is equal to the message number (e.g., blank message
+        /// number 1 has a run time priority of 1 and so on). The
+        /// dmsMessageCRC for all messages of this type shall be 0x0000 and
+        /// the dmsMessageMultiString shall be an OCTET STRING with a length of
+        /// zero (0). The activation priority shall be determined from the
+        /// activation priority of the MessageActivationCode.
+        /// </summary>
+        blank = 7
     }
 
     public enum MessageStatus

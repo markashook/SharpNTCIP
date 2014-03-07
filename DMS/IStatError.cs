@@ -4,6 +4,7 @@ using System.Text;
 
 namespace SharpNTCIP.DMS
 {
+    [Flags]
     public enum SystemError
     {
         other = 1,
@@ -34,6 +35,7 @@ namespace SharpNTCIP.DMS
         test = 3
     }
 
+    [Flags]
     public enum ControllerError
     {
         other = 1,

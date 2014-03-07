@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SharpNTCIP")]
 [assembly: AssemblyDescription("A C# Implementation of NTCIP Interfaces and Data Structures")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("University of Oklahoma, Oklahoma Department of Transportation")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SharpNTCIP")]
-[assembly: AssemblyCopyright("Copyright 2010 University of Oklahoma, Oklahoma Department of Transportation")]
+[assembly: AssemblyCopyright("Copyright 2014 Mark Shook, Released under LGPL3")]
 [assembly: AssemblyTrademark("SharpNTCIP")]
 [assembly: AssemblyCulture("")]
 

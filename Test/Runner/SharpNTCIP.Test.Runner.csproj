@@ -58,7 +58,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\SharpNTCIP.csproj">
       <Project>{2ed7257f-b768-406d-98e1-5dff6c041287}</Project>
-      <Name>SharpNTCIP %28SharpNTCIP\SharpNTCIP%29</Name>
+      <Name>SharpNTCIP</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

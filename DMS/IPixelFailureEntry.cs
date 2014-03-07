@@ -11,6 +11,7 @@ namespace SharpNTCIP.DMS
         messageDisplay = 3
     }
 
+    [Flags]
     public enum PixelFailureStatus
     {
         stuckOff = 0,

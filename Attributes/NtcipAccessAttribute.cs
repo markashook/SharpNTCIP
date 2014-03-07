@@ -3,32 +3,35 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-[AttributeUsage(AttributeTargets.Property)]
-class NtcipAccessAttribute : System.Attribute
+namespace SharpNTCIP.Attributes
 {
-    public enum Access
+    [AttributeUsage(AttributeTargets.Property)]
+    public class NtcipAccessAttribute : System.Attribute
     {
-        none = 0,
-        read = 1,
-        write = 2,
-    }
-
-    private Access _access;
-
-    public Access NtcipAccess
-    {
-        get
+        public enum Access
         {
-            return _access;
+            none = 0,
+            read = 1,
+            write = 2,
         }
-        set
-        {
-            _access = value;
-        }
-    }
 
-    public NtcipAccessAttribute(Access access)
-    {
-        _access = access;
+        private Access _access;
+
+        public Access NtcipAccess
+        {
+            get
+            {
+                return _access;
+            }
+            set
+            {
+                _access = value;
+            }
+        }
+
+        public NtcipAccessAttribute(Access access)
+        {
+            _access = access;
+        }
     }
 }

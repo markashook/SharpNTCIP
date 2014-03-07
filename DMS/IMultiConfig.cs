@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpNTCIP.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -48,6 +49,7 @@ namespace SharpNTCIP.DMS
         color24bit = 4
     }
 
+    [Flags]
     public enum DmsSupportedMultiTags
     {
         none                        = 0,

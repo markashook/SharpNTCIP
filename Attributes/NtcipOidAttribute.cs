@@ -3,25 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-[AttributeUsage(AttributeTargets.Interface | AttributeTargets.Property | AttributeTargets.Class)]
-class NtcipOidAttribute : System.Attribute
+namespace SharpNTCIP.Attributes
 {
-    private string _oid;
-
-    public string NtcipOid
+    [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Property | AttributeTargets.Class)]
+    public class NtcipOidAttribute : System.Attribute
     {
-        get
-        {
-            return _oid;
-        }
-        set
-        {
-            _oid = value;
-        }
-    }
+        private string _oid;
 
-    public NtcipOidAttribute(string oid)
-    {
-        _oid = oid;
+        public string NtcipOid
+        {
+            get
+            {
+                return _oid;
+            }
+            set
+            {
+                _oid = value;
+            }
+        }
+
+        public NtcipOidAttribute(string oid)
+        {
+            _oid = oid;
+        }
     }
 }

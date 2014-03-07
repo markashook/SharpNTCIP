@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpNTCIP.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,7 @@ namespace SharpNTCIP.DMS
     /// Indicates the access method to a sign. These may be added 
     /// together to indicate more than one method of entry.
     /// </summary>
+    [Flags]
     public enum DMSAccess
     {
         /// <summary>
@@ -168,6 +170,7 @@ namespace SharpNTCIP.DMS
     /// Indicates the utilized technology in a bitmap format 
     /// Hybrids will have to set the bits for all technologies that the sign utilizes.
     /// </summary>
+    [Flags]
     public enum DmsSignTechnology
     {
         other = 1,
