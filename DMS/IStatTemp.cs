@@ -20,7 +20,7 @@ namespace SharpNTCIP.DMS
         /// <remarks>
         /// Supports values from -128 to 127 degrees Celsius
         /// </remarks>
-        Nullable<Int16> tempMinCtrlCabinet
+        Int16 tempMinCtrlCabinet
         {
             get;
         }
@@ -33,7 +33,7 @@ namespace SharpNTCIP.DMS
         /// <remarks>
         /// Supports values from -128 to 127 degrees Celsius
         /// </remarks>
-        Nullable<Int16> tempMaxCtrlCabinet
+        Int16 tempMaxCtrlCabinet
         {
             get;
         }
@@ -46,7 +46,7 @@ namespace SharpNTCIP.DMS
         /// <remarks>
         /// Supports values from -128 to 127 degrees Celsius
         /// </remarks>
-        Nullable<Int16> tempMinAmbient
+        Int16 tempMinAmbient
         {
             get;
         }
@@ -59,7 +59,7 @@ namespace SharpNTCIP.DMS
         /// <remarks>
         /// Supports values from -128 to 127 degrees Celsius
         /// </remarks>
-        Nullable<Int16> tempMaxAmbient
+        Int16 tempMaxAmbient
         {
             get;
         }
@@ -72,7 +72,7 @@ namespace SharpNTCIP.DMS
         /// <remarks>
         /// Supports values from -128 to 127 degrees Celsius
         /// </remarks>
-        Nullable<Int16> tempMinSignHousing
+        Int16 tempMinSignHousing
         {
             get;
         }
@@ -85,7 +85,7 @@ namespace SharpNTCIP.DMS
         /// <remarks>
         /// Supports values from -128 to 127 degrees Celsius
         /// </remarks>
-        Nullable<Int16> tempMaxSignHousing
+        Int16 tempMaxSignHousing
         {
             get;
         }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SharpNTCIP.DMS
 {
-    public class CharacterTable : Table<Tuple<byte,UInt16>, ICharacterEntry>
+    public class StatMultiFieldTable : Table<Tuple<byte>, IStatMultiFieldEntry>
     {
     }
 }

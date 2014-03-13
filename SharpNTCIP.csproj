@@ -66,6 +66,7 @@
     <Compile Include="Attributes\NtcipAccessAttribute.cs" />
     <Compile Include="Attributes\NtcipMandatoryAttribute.cs" />
     <Compile Include="Attributes\NtcipOidAttribute.cs" />
+    <Compile Include="DMS\CharacterInfoList.cs" />
     <Compile Include="DMS\CharacterTable.cs" />
     <Compile Include="DMS\FontTable.cs" />
     <Compile Include="DMS\IDmsActionEntry.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="DMS\IDmsSignConfig.cs" />
     <Compile Include="DMS\IVmsCfg.cs" />
     <Compile Include="DMS\MultiUtility.cs" />
+    <Compile Include="DMS\StatMultiFieldTable.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="IAuxiliaryIo.cs" />
     <Compile Include="IGlobalConfiguration.cs" />

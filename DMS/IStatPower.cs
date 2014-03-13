@@ -66,7 +66,7 @@ namespace SharpNTCIP.DMS
         /// power alarm (bit 2) in the shortErrorStatus-object shall be 
         /// set to one (1).
         /// </remarks>
-        Nullable<byte> lowFuelThreshold
+        byte lowFuelThreshold
         {
             get;
             set;

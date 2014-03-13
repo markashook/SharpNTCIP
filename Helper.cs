@@ -34,5 +34,14 @@ namespace SharpNTCIP
                 throw new InvalidCastException("Returned value does not match known NTCIP values. Perhaps this device implements a newer version of the NTCIP standard");
             }
         }
+
+        protected static string formatOid(string oidString, params object[] list)
+        {
+            object[] idList = new object[list.Length];
+            for (int i = 0; i < idList.Length; i++)
+                idList[i] = Convert.ToInt32(list[i]);
+            string finalOid = String.Format(oidString, idList);
+            return finalOid;
+        }
     }
 }

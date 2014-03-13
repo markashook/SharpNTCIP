@@ -21,7 +21,7 @@ namespace SharpNTCIP.DMS
             get;
         }
 
-        IStatMultiFieldEntry[] statMultiFieldTable
+        StatMultiFieldTable statMultiFieldTable
         {
             get;
         }
@@ -32,7 +32,7 @@ namespace SharpNTCIP.DMS
         /// per hour (km/h). This value may vary from the displayed speed 
         /// value due to application specific implementation
         /// </summary>
-        Nullable<byte> dmsCurrentSpeed
+        byte dmsCurrentSpeed
         {
             get;
         }
@@ -40,7 +40,7 @@ namespace SharpNTCIP.DMS
         /// <summary>
         /// Indicates the current speed limit in kilometers per hour (km/h)
         /// </summary>
-        Nullable<byte> dmsCurrentSpeedLimit
+        byte dmsCurrentSpeedLimit
         {
             get;
             set;
@@ -49,7 +49,7 @@ namespace SharpNTCIP.DMS
         /// <summary>
         /// Indicates the number of watchdog failures that have occurred
         /// </summary>
-        Nullable<int> watchdogFailureCount
+        int watchdogFailureCount
         {
             get;
         }
@@ -60,7 +60,7 @@ namespace SharpNTCIP.DMS
         /// set (= 1) then the door is open; if a bit not is not set, then 
         /// the associated door is closed
         /// </summary>
-        Nullable<byte> dmsStatDoorOpen
+        byte dmsStatDoorOpen
         {
             get;
         }

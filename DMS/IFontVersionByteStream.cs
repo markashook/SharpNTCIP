@@ -11,10 +11,9 @@ namespace SharpNTCIP.DMS
             get;
         }
 
-        ICharacterEntry[] characterInfoList
+        CharacterInfoList characterInfoList
         {
             get;
         }
-
     }
 }

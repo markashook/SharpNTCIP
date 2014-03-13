@@ -78,7 +78,7 @@ namespace SharpNTCIP.DMS
         /// The detection of pixel failures during message displays 
         /// shall be appended to the end of the table
         /// </remarks>
-        IPixelFailureEntry[] pixelFailureTable
+        Table<Tuple<PixelFailureDetectionType, UInt16>, IPixelFailureEntry> pixelFailureTable
         {
             get;
         }
