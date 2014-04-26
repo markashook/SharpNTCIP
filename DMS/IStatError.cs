@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SharpNTCIP.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SharpNTCIP.DMS
 {
+
     [Flags]
     public enum SystemError
     {
@@ -48,6 +50,7 @@ namespace SharpNTCIP.DMS
     /// Supports DMS sign message error status functions that are common 
     /// to DMS devices.
     /// </summary>
+    [NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7")]
     public interface IStatError
     {
         /// <summary>
@@ -57,7 +60,10 @@ namespace SharpNTCIP.DMS
         /// This value is an OR'd set of SystemError enum values
         /// </remarks>
         /// <seealso cref="SystemError"/>
-        UInt16 shortErrorStatus
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.1.0")]
+        SystemError shortErrorStatus
         {
             get;
         }
@@ -66,6 +72,9 @@ namespace SharpNTCIP.DMS
         /// The number of rows contained in the pixelFailureTable each 
         /// indicating failed pixels
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.2.0")]
         UInt16 pixelFailureTableNumRows
         {
             get;
@@ -78,7 +87,7 @@ namespace SharpNTCIP.DMS
         /// The detection of pixel failures during message displays 
         /// shall be appended to the end of the table
         /// </remarks>
-        Table<Tuple<PixelFailureDetectionType, UInt16>, IPixelFailureEntry> pixelFailureTable
+        PixelFailureTable pixelFailureTable
         {
             get;
         }
@@ -150,6 +159,9 @@ namespace SharpNTCIP.DMS
         /// <remarks>
         /// If a fan (system) failed, its associated bit is set to one (1)
         /// </remarks>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.8.0")]
         byte[] fanFailures
         {
             get;
@@ -166,6 +178,9 @@ namespace SharpNTCIP.DMS
         /// controller will automatically set the value of this object back 
         /// to noTest after completion
         /// </remarks>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.9.0")]
         TestActivation fanTestActivation
         {
             get;
@@ -182,9 +197,61 @@ namespace SharpNTCIP.DMS
         /// existing
         /// </remarks>
         /// <seealso cref="ControllerError"/>
-        byte controllerErrorStatus
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.10.0")]
+        ControllerError controllerErrorStatus
         {
             get;
         }
+
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.11.0")]
+        byte[] dmsPowerFailureStatusMap
+        {
+            get;
+        }
+
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.12.0")]
+        DmsRowIndex dmsPowerNumRows
+        {
+            get;
+        }
+
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.13")]
+        DmsPowerStatusTable dmsPowerStatusTable
+        {
+            get;
+        }
+
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.14.0")]
+        byte[] dmsClimateCtrlStatusMap
+        {
+            get;
+        }
+
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.16.0")]
+        DmsRowIndex dmsClimateCtrlNumRows
+        {
+            get;
+        }
+
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7.17")]
+        DmsClimateCtrlStatusTable dmsClimateCtrlStatusTable
+        {
+            get;
+        }
+
     }
 }

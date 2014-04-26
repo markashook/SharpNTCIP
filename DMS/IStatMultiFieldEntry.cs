@@ -4,6 +4,8 @@ using System.Text;
 
 namespace SharpNTCIP.DMS
 {
+    ///TODO: Label with NTCIP OIDs
+
     /// <summary>
     /// Contains the currently displayed value of a specified Field
     /// </summary>

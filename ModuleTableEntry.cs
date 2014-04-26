@@ -21,7 +21,7 @@ namespace SharpNTCIP
         /// This object contains the row number (1..255) within
         /// this table for the associated module
         /// </summary>
-        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.1")]
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.1.{0}")]
         [NtcipMandatory(true)]
         [NtcipAccess(NtcipAccessAttribute.Access.read)]
         public virtual uint moduleNumber
@@ -34,7 +34,7 @@ namespace SharpNTCIP
         /// device-type, e.g., an ASC signal controller would have an OID of
         /// 1.3.6.1.4.1.1206.4.2.1
         /// </summary>
-        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.2")]
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.2.{0}")]
         [NtcipMandatory(true)]
         [NtcipAccess(NtcipAccessAttribute.Access.read)]
         public virtual object moduleDeviceNode
@@ -47,7 +47,7 @@ namespace SharpNTCIP
         /// associated module. A null-string shall be transmitted if this
         /// object has no entry.
         /// </summary>
-        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.3")]
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.3.{0}")]
         [NtcipMandatory(true)]
         [NtcipAccess(NtcipAccessAttribute.Access.read)]
         public virtual string moduleMake
@@ -60,7 +60,7 @@ namespace SharpNTCIP
         /// firmware reference (software) of the associated module. A nullstring
         /// shall be transmitted if this object has no entry.
         /// </summary>
-        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.4")]
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.4.{0}")]
         [NtcipMandatory(true)]
         [NtcipAccess(NtcipAccessAttribute.Access.read)]
         public virtual string moduleModel
@@ -79,7 +79,7 @@ namespace SharpNTCIP
         /// the software released on July 5, 2002 would be presented as
         /// 20020705 – v7.03.02
         /// </summary>
-        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.5")]
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.5.{0}")]
         [NtcipMandatory(true)]
         [NtcipAccess(NtcipAccessAttribute.Access.read)]
         public virtual string moduleVersion
@@ -91,7 +91,7 @@ namespace SharpNTCIP
         /// This object specifies whether the associated module
         /// is a hardware or software module
         /// </summary>
-        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.6")]
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.3.1.6.{0}")]
         [NtcipMandatory(true)]
         [NtcipAccess(NtcipAccessAttribute.Access.read)]
         public virtual ModuleType moduleType
@@ -129,7 +129,7 @@ namespace SharpNTCIP
         /// NTCIP 2201:v01.14
         /// NTCIP 2301:2001 v01.08
         /// </summary>
-        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.4")]
+        [NtcipOid("1.3.6.1.4.1.1206.4.2.6.1.4.{0}")]
         [NtcipMandatory(true)]
         [NtcipAccess(NtcipAccessAttribute.Access.read)]
         public virtual string controllerBaseStandards

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using SharpNTCIP.Attributes;
 
 namespace SharpNTCIP.DMS
 {
@@ -16,11 +17,17 @@ namespace SharpNTCIP.DMS
         /// Indicates the number of rows in the statMultiFieldTable 
         /// that are currently being used
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.1.0")]
         byte statMultiFieldRows
         {
             get;
         }
 
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.2")]
         StatMultiFieldTable statMultiFieldTable
         {
             get;
@@ -32,6 +39,9 @@ namespace SharpNTCIP.DMS
         /// per hour (km/h). This value may vary from the displayed speed 
         /// value due to application specific implementation
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.3.0")]
         byte dmsCurrentSpeed
         {
             get;
@@ -40,6 +50,9 @@ namespace SharpNTCIP.DMS
         /// <summary>
         /// Indicates the current speed limit in kilometers per hour (km/h)
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.4.0")]
         byte dmsCurrentSpeedLimit
         {
             get;
@@ -49,6 +62,9 @@ namespace SharpNTCIP.DMS
         /// <summary>
         /// Indicates the number of watchdog failures that have occurred
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.5.0")]
         int watchdogFailureCount
         {
             get;
@@ -60,6 +76,9 @@ namespace SharpNTCIP.DMS
         /// set (= 1) then the door is open; if a bit not is not set, then 
         /// the associated door is closed
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.6.0")]
         byte dmsStatDoorOpen
         {
             get;
@@ -68,6 +87,9 @@ namespace SharpNTCIP.DMS
         /// <summary>
         /// Supports monitoring DMS sign message error status
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("1.3.6.1.4.1.1206.4.2.3.9.7")]
         IStatError statError
         {
             get;
@@ -76,6 +98,9 @@ namespace SharpNTCIP.DMS
         /// <summary>
         /// Supports monitoring DMS sign power status
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("")]
         IStatPower statPower
         {
             get;
@@ -84,6 +109,9 @@ namespace SharpNTCIP.DMS
         /// <summary>
         /// Supports monitoring DMS sign temperature status
         /// </summary>
+        [NtcipAccess(NtcipAccessAttribute.Access.read),
+        NtcipMandatory(true),
+        NtcipOid("")]
         IStatTemp statTemp
         {
             get;

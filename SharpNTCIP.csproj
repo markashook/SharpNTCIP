@@ -33,7 +33,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>SharpNTCIP_NuGet\lib\net40\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -43,7 +43,7 @@
     </DocumentationFile>
     <RegisterForComInterop>false</RegisterForComInterop>
     <Prefer32Bit>false</Prefer32Bit>
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>x86</PlatformTarget>
@@ -68,12 +68,16 @@
     <Compile Include="Attributes\NtcipOidAttribute.cs" />
     <Compile Include="DMS\CharacterInfoList.cs" />
     <Compile Include="DMS\CharacterTable.cs" />
+    <Compile Include="DMS\DmsClimateCtrlStatusTable.cs" />
+    <Compile Include="DMS\DmsPowerStatusTable.cs" />
     <Compile Include="DMS\FontTable.cs" />
     <Compile Include="DMS\IDmsActionEntry.cs" />
     <Compile Include="DMS\IAuxIoEntry.cs" />
+    <Compile Include="DMS\IDmsClimateCtrlStatusEntry.cs" />
     <Compile Include="DMS\IDmsMessage.cs" />
     <Compile Include="DMS\ICharacterEntry.cs" />
     <Compile Include="DMS\DmsMessageTable.cs" />
+    <Compile Include="DMS\IDmsPowerStatusEntry.cs" />
     <Compile Include="DMS\IFontEntry.cs" />
     <Compile Include="DMS\IFontInformation.cs" />
     <Compile Include="DMS\IFontVersionByteStream.cs" />
@@ -96,6 +100,8 @@
     <Compile Include="DMS\IDmsSignConfig.cs" />
     <Compile Include="DMS\IVmsCfg.cs" />
     <Compile Include="DMS\MultiUtility.cs" />
+    <Compile Include="DMS\PixelFailureTable.cs" />
+    <Compile Include="DMS\PowerIndex.cs" />
     <Compile Include="DMS\StatMultiFieldTable.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="IAuxiliaryIo.cs" />

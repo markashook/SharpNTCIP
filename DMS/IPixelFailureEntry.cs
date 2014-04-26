@@ -4,6 +4,8 @@ using System.Text;
 
 namespace SharpNTCIP.DMS
 {
+    ///TODO: Label with NTCIP OIDs
+
     public enum PixelFailureDetectionType
     {
         other = 1,
